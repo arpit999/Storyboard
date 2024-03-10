@@ -14,13 +14,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        textField.becomeFirstResponder() // Auto start keyBoard
         
     }
 
     @IBAction func buttonWasPressed(_ sender: Any) {
+        textField.resignFirstResponder() // Hide Keyboard
         let name = textField.text ?? ""
         label.text = "Hello, \(name)"
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textField.resignFirstResponder()
+    }
 }
 
