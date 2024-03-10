@@ -13,9 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        label.text = "Text Changed new text"
+        
     }
 
-
+    @IBAction func buttonWasPressed(_ sender: Any) {
+        label.text = "Text Changed new text"
+    }
+    
 }
 
