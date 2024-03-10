@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 @IBOutlet weak var label: UILabel!
+@IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +18,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonWasPressed(_ sender: Any) {
-        label.text = "Text Changed new text"
+        let name = textField.text ?? ""
+        label.text = "Hello, \(name)"
     }
     
 }
